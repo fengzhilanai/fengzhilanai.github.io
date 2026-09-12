@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+
+:root { --bg:#14100c; --ink:#f3ecdd; --orange:#fa6d0f; --dark:#171310; }
+* { box-sizing:border-box; }
+html, body { margin:0; min-width:320px; background:var(--bg); color:var(--ink); }
+body { font-family:'Archivo','Noto Sans SC',sans-serif; -webkit-font-smoothing:antialiased; }
+a { color:inherit; }
+.hero { position:relative; min-height:100vh; overflow:hidden; background:var(--bg); }
+.scene, .scene-fallback, spline-viewer { position:absolute; inset:0; width:100%; height:100%; }
+.scene { z-index:0; background:var(--bg); }
+spline-viewer { display:block; border:0; }
+.scene-fallback { z-index:-1; background-color:var(--bg); background-image:radial-gradient(circle at 62% 45%,rgba(250,109,15,.22),transparent 55%),repeating-linear-gradient(135deg,rgba(250,109,15,.08) 0 16px,transparent 16px 32px); }
+.hero-shade { position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(105deg,rgba(20,16,12,.92) 0%,rgba(20,16,12,.72) 38%,rgba(20,16,12,.25) 70%,rgba(20,16,12,.45) 100%),linear-gradient(to top,rgba(20,16,12,.95) 0%,rgba(20,16,12,.35) 42%,rgba(20,16,12,0) 70%); }
+.hero-content { position:relative; z-index:2; display:flex; min-height:100vh; flex-direction:column; pointer-events:none; }
+.site-header { display:flex; width:100%; max-width:1152px; height:64px; margin:0 auto; padding:0 32px; align-items:center; justify-content:space-between; gap:16px; }
+.brand { display:flex; align-items:center; gap:12px; }
+.brand-mark { display:flex; width:36px; height:36px; align-items:center; justify-content:center; border:2px solid var(--ink); background:var(--orange); color:var(--dark); font-size:18px; font-weight:900; box-shadow:3px 3px 0 var(--ink); }
+.brand-copy { line-height:1; }
+.brand-copy strong { display:block; font-size:16px; font-weight:900; letter-spacing:-.02em; }
+.brand-copy small { display:block; margin-top:5px; color:rgba(243,236,221,.55); font-size:10px; font-weight:700; letter-spacing:.22em; }
+.header-note { display:flex; align-items:center; gap:8px; color:rgba(243,236,221,.7); font-size:12px; font-weight:700; letter-spacing:.2em; }
+.header-note i, .eyebrow i { display:inline-block; width:8px; height:8px; background:var(--orange); }
+.hero-inner { display:flex; width:100%; max-width:1152px; flex:1; margin:0 auto; padding:8px 32px 40px; flex-direction:column; justify-content:center; }
+.hero-copy { max-width:672px; }
+.eyebrow { display:inline-flex; align-items:center; gap:8px; border:2px solid var(--orange); background:rgba(250,109,15,.1); padding:4px 10px; color:var(--orange); font-size:12px; font-weight:900; letter-spacing:.22em; }
+h1 { margin:20px 0 0; font-size:clamp(36px,5vw,60px); line-height:1.08; letter-spacing:-.04em; }
+h1 span { color:var(--orange); }
+.hero-copy > p { max-width:576px; margin:16px 0 0; color:rgba(243,236,221,.7); font-size:16px; line-height:1.65; }
+.path-grid { display:grid; margin-top:40px; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.path-card { position:relative; display:flex; min-height:214px; flex-direction:column; border:2px solid rgba(243,236,221,.25); background:rgba(20,16,12,.6); padding:24px; pointer-events:auto; text-decoration:none; backdrop-filter:blur(12px); transition:transform .2s,box-shadow .2s,border-color .2s,background-color .2s; }
+.path-card:hover,.path-card:focus-visible { border-color:var(--orange); background:rgba(20,16,12,.8); box-shadow:7px 7px 0 var(--orange); outline:none; transform:translate(-4px,-4px); }
+.path-card:active { transform:translate(0,0); box-shadow:2px 2px 0 var(--orange); }
+.card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; }
+.number { display:flex; width:44px; height:44px; align-items:center; justify-content:center; border:2px solid rgba(243,236,221,.8); border-radius:50%; font-size:14px; font-weight:900; }
+.number-orange { background:var(--orange); color:var(--dark); }.number-light { background:var(--ink); color:var(--dark); }.number-cream { color:var(--ink); }
+.arrow { display:flex; width:28px; height:28px; align-items:center; justify-content:center; border:2px solid rgba(243,236,221,.7); font-size:18px; }
+.path-card h2 { margin:16px 0 0; font-size:20px; line-height:1.35; }.path-card p { margin:8px 0 0; color:rgba(243,236,221,.65); font-size:13px; line-height:1.6; }
+.coming { position:absolute; top:25px; right:62px; border:1px solid rgba(243,236,221,.4); padding:2px 6px; color:rgba(243,236,221,.6); font-size:10px; font-weight:700; letter-spacing:.15em; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:16px; }.tags span { border:1px solid rgba(243,236,221,.25); background:rgba(243,236,221,.05); padding:2px 6px; color:rgba(243,236,221,.7); font-size:11px; }.tags em { padding:2px 4px; color:var(--orange); font-size:11px; font-style:normal; font-weight:700; }
+.site-footer { position:relative; z-index:1; display:flex; max-width:1152px; width:100%; margin:0 auto; border-top:1px solid rgba(243,236,221,.15); padding:16px 32px; justify-content:space-between; gap:4px; color:rgba(243,236,221,.45); font-size:11px; font-weight:700; letter-spacing:.14em; }
+.scene-error spline-viewer { visibility:hidden; }
+@media (max-width:639px) { .site-header,.hero-inner,.site-footer { padding-left:16px; padding-right:16px; }.header-note { display:none; }.hero-inner { padding-bottom:24px; }.path-grid { grid-template-columns:1fr; gap:16px; margin-top:32px; }.path-card { min-height:190px; padding:20px; }.site-footer { flex-direction:column; letter-spacing:.08em; } h1 { font-size:clamp(34px,10vw,48px); }.hero-copy > p { font-size:14px; } }
+@media (min-width:640px) and (max-width:767px) { .site-header,.hero-inner,.site-footer { padding-left:16px; padding-right:16px; }.path-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:32px; } }
+@media (min-width:768px) { .site-header,.hero-inner,.site-footer { padding-left:32px; padding-right:32px; } }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } }
